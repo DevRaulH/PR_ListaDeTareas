@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\TesAmerica_Backup\\source\\repos\\ListaDeTareas\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C9F5E65D-F9E0-4262-B37F-E6077F280590}|ListaDeTareas\\ListaDeTareas.csproj|c:\\users\\tesamerica_backup\\source\\repos\\listadetareas\\listadetareas\\controllers\\datagridfilteringcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9F5E65D-F9E0-4262-B37F-E6077F280590}|ListaDeTareas\\ListaDeTareas.csproj|solutionrelative:listadetareas\\controllers\\datagridfilteringcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C9F5E65D-F9E0-4262-B37F-E6077F280590}|ListaDeTareas\\ListaDeTareas.csproj|c:\\users\\tesamerica_backup\\source\\repos\\listadetareas\\listadetareas\\controllers\\datagridcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9F5E65D-F9E0-4262-B37F-E6077F280590}|ListaDeTareas\\ListaDeTareas.csproj|solutionrelative:listadetareas\\controllers\\datagridcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C9F5E65D-F9E0-4262-B37F-E6077F280590}|ListaDeTareas\\ListaDeTareas.csproj|c:\\users\\tesamerica_backup\\source\\repos\\listadetareas\\listadetareas\\models\\listadotareas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C9F5E65D-F9E0-4262-B37F-E6077F280590}|ListaDeTareas\\ListaDeTareas.csproj|C:\\Users\\TesAmerica_Backup\\source\\repos\\ListaDeTareas\\listadetareas\\models\\listadotareas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C9F5E65D-F9E0-4262-B37F-E6077F280590}|ListaDeTareas\\ListaDeTareas.csproj|solutionrelative:listadetareas\\models\\listadotareas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C9F5E65D-F9E0-4262-B37F-E6077F280590}|ListaDeTareas\\ListaDeTareas.csproj|C:\\Users\\TesAmerica_Backup\\source\\repos\\ListaDeTareas\\listadetareas\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{C9F5E65D-F9E0-4262-B37F-E6077F280590}|ListaDeTareas\\ListaDeTareas.csproj|solutionrelative:listadetareas\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9F5E65D-F9E0-4262-B37F-E6077F280590}|ListaDeTareas\\ListaDeTareas.csproj|c:\\users\\tesamerica_backup\\source\\repos\\listadetareas\\listadetareas\\controllers\\datagridfilteringcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9F5E65D-F9E0-4262-B37F-E6077F280590}|ListaDeTareas\\ListaDeTareas.csproj|solutionrelative:listadetareas\\controllers\\datagridfilteringcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,6 +31,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "DataGridController.cs",
+              "DocumentMoniker": "C:\\Users\\TesAmerica_Backup\\source\\repos\\ListaDeTareas\\ListaDeTareas\\Controllers\\DataGridController.cs",
+              "RelativeDocumentMoniker": "ListaDeTareas\\Controllers\\DataGridController.cs",
+              "ToolTip": "C:\\Users\\TesAmerica_Backup\\source\\repos\\ListaDeTareas\\ListaDeTareas\\Controllers\\DataGridController.cs",
+              "RelativeToolTip": "ListaDeTareas\\Controllers\\DataGridController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-19T00:27:51.76Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "DataGridFilteringController.cs",
               "DocumentMoniker": "C:\\Users\\TesAmerica_Backup\\source\\repos\\ListaDeTareas\\ListaDeTareas\\Controllers\\DataGridFilteringController.cs",
               "RelativeDocumentMoniker": "ListaDeTareas\\Controllers\\DataGridFilteringController.cs",
@@ -45,7 +62,7 @@
               "RelativeDocumentMoniker": "ListaDeTareas\\Models\\ListadoTareas.cs",
               "ToolTip": "C:\\Users\\TesAmerica_Backup\\source\\repos\\ListaDeTareas\\ListaDeTareas\\Models\\ListadoTareas.cs",
               "RelativeToolTip": "ListaDeTareas\\Models\\ListadoTareas.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAFAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-19T00:19:28.205Z",
               "EditorCaption": ""
@@ -60,7 +77,8 @@
               "RelativeToolTip": "ListaDeTareas\\Views\\Home\\Index.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-19T00:06:05.676Z"
+              "WhenOpened": "2024-04-19T00:06:05.676Z",
+              "EditorCaption": ""
             }
           ]
         }
