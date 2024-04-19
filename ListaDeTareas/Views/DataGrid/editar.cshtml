@@ -1,31 +1,38 @@
-﻿@using ListaDeTareas.Models;
+﻿<!-- Uso del modelo de la BD ListaDeTareas -->
+@using ListaDeTareas.Models;
+<!-- Uso del modelo de la BD ListaDeTareas enviado como una lista desde el controlador DataGrid -->
 @model IEnumerable<ListaDeTareas.Models.ListadoTareas>
 
-
+<!-- Uso del layout -->
 @{
     ViewBag.Title = "editar";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <head>
+    <!-- Uso exclusivo de la pagina con Bootstrap CSS  -->
     <link href="~/Content/cssboostrap.css" rel="stylesheet" />
 </head>
 
-
+<!-- Contenedor de todo el formulario  -->
 <div class="bg-contact100">
     <div class="container-contact100">
         <div class="wrap-contact100">
+            <!-- Contenedor de imagen  -->
             <div class="contact100-pic js-tilt" data-tilt>
                 <img src="~/Images/registrar.jpg" alt="IMG">
             </div>
+            <!-- Formulario para actualizar tarea enviando los datos al metodo actualizar en el controlador DataGrid  -->
             <form class="contact100-form validate-form" action="@Url.Action("actualizarTarea","DataGrid")" method="post">
                 <h2 class="p-2">Editar tarea</h2>
-                
+                <!-- Forecha para la iteracion de los datos enviados a la vista en una lista  -->
                 @foreach (ListaDeTareas.Models.ListadoTareas item in Model)
                 {
 
                     <div class="wrap-input100 validate-input" data-validate="Name is required">
+                        <!-- Input oculto con el valor id de tarea enviado desde el DataGrid  -->
                         <input type="hidden" name="IdTarea" value="@item.IdTarea" />
+                        <!-- Input con el valor del nombre de tarea enviado desde el DataGrid  -->
                         <input class="input100" type="text" name="Tarea" value="@item.Tarea" autocomplete="off" required placeholder="Tarea...">
 
                         <span class="focus-input100"></span>
@@ -35,11 +42,13 @@
                     </div>
 
                     <div class="wrap-input100 validate-input" data-validate="Message is required">
+                        <!-- Textarea con el valor descriptivo de la tarea enviado desde el DataGrid  -->
                         <textarea class="input100" name="DescripcionTarea" autocomplete="off" required placeholder="Descripcion...">@item.DescripcionTarea</textarea>
                         <span class="focus-input100"></span>
                     </div>
 
                     <div class="wrap-input100 validate-input" data-validate="Name is required">
+                        <!-- Input con el valor del estado de la tarea enviado desde el DataGrid  -->
                         <input class="input100" type="text" name="Estado" value="@item.Estado" autocomplete="off" required placeholder="Estado...">
 
                         <span class="focus-input100"></span>
@@ -49,6 +58,7 @@
                     </div>
 
                     <div class="wrap-input100 validate-input" data-validate="Name is required">
+                        <!-- Input de solo lectura con el valor de la fecha de creacion  -->
                         <input class="input100" type="datetime" name="CreacionTarea" value="@item.CreacionTarea" autocomplete="off" required readonly>
 
                         <span class="focus-input100"></span>
@@ -58,7 +68,9 @@
                     </div>
 
                     <div class="container-contact100-form-btn">
+                        <!-- Boton para el envio del formuario  -->
                         <button type="submit" class="btn btn-outline-success btn-sm contact100-form-btn">Actualizar</button>
+                        <!-- Boton para volver al formulario de inicio  -->
                         <a class="btn btn-outline-danger btn-sm contact100-form-btn" href="@Url.Action("Index","DataGrid")">Cancelar</a>
                     </div>
                 }

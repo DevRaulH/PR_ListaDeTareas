@@ -1,41 +1,50 @@
-﻿@using ListaDeTareas.Models;
+﻿<!-- Uso del modelo de la BD ListaDeTareas -->
+@using ListaDeTareas.Models;
 
-
+<!-- Uso del layout -->
 @{
     ViewBag.Title = "agregar";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <head>
-    <link href="~/Content/cssboostrap.css" rel="stylesheet"/>
+    <!-- Uso exclusivo de la pagina con Bootstrap CSS  -->
+    <link href="~/Content/cssboostrap.css" rel="stylesheet" />
 </head>
 
-
+<!-- Contenedor de todo el formulario  -->
 <div class="bg-contact100">
     <div class="container-contact100">
         <div class="wrap-contact100">
+            <!-- Contenedor de imagen  -->
             <div class="contact100-pic js-tilt" data-tilt>
                 <img src="~/Images/registrar.jpg" alt="IMG">
             </div>
+            <!-- Formulario para agregar tarea enviando los datos al metodo agregar en el controlador DataGrid  -->
             <form class="contact100-form validate-form" action="@Url.Action("AgregarTarea","DataGrid")" method="post">
                 <h2 class="p-2">Agregar tarea</h2>
 
                 <div class="wrap-input100 validate-input" data-validate="Name is required">
+                    <!-- Input con el valor escrito por el usuario  -->
                     <input class="input100" type="text" name="Tarea" autocomplete="off" required placeholder="Escribe un nombre...">
-                        
+
                     <span class="focus-input100"></span>
                     <span class="symbol-input100">
                         <i class="fa fa-user" aria-hidden="true"></i>
                     </span>
                 </div>
-                
+
                 <div class="wrap-input100 validate-input" data-validate="Message is required">
+                    <!-- Textarea con el valor escrito por el usuario  -->
                     <textarea class="input100" name="DescripcionTarea" autocomplete="off" required placeholder="Escribe una descripcion..."></textarea>
                     <span class="focus-input100"></span>
                 </div>
                 <div class="container-contact100-form-btn">
+                    <!-- Boton para el envio del formuario  -->
                     <button type="submit" class="btn btn-outline-success btn-sm contact100-form-btn">Agregar</button>
+                    <!-- Boton para volver al formulario de inicio  -->
                     <a class="btn btn-outline-danger btn-sm contact100-form-btn" href="@Url.Action("Index","DataGrid")">Cancelar</a>
+                    <!-- Boton para borrar el contenido del formuario  -->
                     <button class="btn btn-outline-primary btn-sm contact100-form-btn" type="reset">Limpiar</button>
                 </div>
             </form>

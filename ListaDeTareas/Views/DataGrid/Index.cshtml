@@ -1,11 +1,15 @@
-﻿@using ListaDeTareas.Models;
+﻿<!-- Uso del modelo de la BD ListaDeTareas -->
+@using ListaDeTareas.Models;
+
 
 <head>
+    <!-- Uso exclusivo de la pagina con Devexpress CSS  -->
     <link rel="stylesheet" href="~/Content/style.css" />
 </head>
 
 <h2>Inicio</h2>
 
+<!-- Botones de de redireccion para agregar o recargar -->
 <div class="container" style="align-items:end;">
 
     <a class="btn btn-outline-success" href="@Url.Action("agregar","DataGrid")">Agregar Tarea</a>
@@ -14,8 +18,8 @@
 </div>
 
 
-
-@(Html.DevExtreme().DataGrid<ListadoTareas>()
+<!-- Uso del frame Devexpress DataGrid MVC  -->
+@(Html.DevExtreme().DataGrid<ListadoTareas>() //Se crea objeto HTML DevExtreme con el modelo de BD que se esta cargando desde el controlador DataGridFiltering
     .ID("gridContainer")
     .ColumnAutoWidth(true)
     .RowAlternationEnabled(true)
@@ -39,13 +43,13 @@
         .Width(240)
         .Placeholder("Buscar...")
     )
-    .HeaderFilter(headerFilter => headerFilter.Visible(true))
+    .HeaderFilter(headerFilter => headerFilter.Visible(true)) //Desde .ID - .HeaderFilter atributos para el filtrado y diseño de tabla
 
-    .Columns(columns => {
-        columns.AddFor(m => m.IdTarea)
-            .Width(140)
+    .Columns(columns => { //Creacion de Columnas
+        columns.AddFor(m => m.IdTarea) //Se itera en expresion landa el ID vs Datasource.key
+            .Width(80)
             .HeaderFilter(filter => filter.GroupInterval(5))
-            .Caption("ID");
+            .Caption("ID"); //Uso de la propiedad .Caption para establecer el nombre de la columna
 
         columns.AddFor(m => m.Tarea)
             .Caption("Nombre de tarea");
@@ -58,44 +62,57 @@
 
         columns.AddFor(m => m.CreacionTarea)
             .Caption("Fecha de creación")
-            .Alignment(HorizontalAlignment.Right)
+            .Alignment(HorizontalAlignment.Right) //Uso de la propiedad Alignment para establecer el alineado del formato en la columna
             .Width(180)
             .DataType(GridColumnDataType.DateTime)
-            .Format("d/M/yyyy, HH:mm");
-        columns.Add()
+            .Format("d/M/yyyy, HH:mm"); //Se establece el formato en el cual se quiere visualizar la fecha en la celda
+        columns.Add() //Columna adicional para ningun valor IdTarea
                 .Caption("Opciones")
                 .AllowFiltering(false)
                 .AllowSorting(false)
-                .CellTemplate(
-                            @<text>
-                                    <div>
-                                        <form action="@Url.Action("editar","DataGrid")" method="post">
-
+                .CellTemplate( //Uso de la porpiedad para agregar los valores en la celda
+                            @<text>  <!-- Se abre etiqueta <text> para ingresar codigo HTML  -->
+                                <div class="form-row"> @* Div contenedor de todos los botones de opciones*@
+                                    <div class="col">
+                                        <form action="@Url.Action("marcar","DataGrid")" method="post"> @* Form para marcar la respectiva tarea*@
+                                            <input type="hidden" name="IdTarea" value="<%=data.IdTarea%>" /> @* Input que almacena el valor para su respectiva accion*@
+                                            <input type="hidden" id="Estado" name="Estado" value="<%=data.Estado%>" />@* Input que almacena el valor para su respectiva accion*@
+                                            <button id="Check" class="btn btn-outline-primary btn-sm" type="submit" style="border-radius:10%; width:50px;">
+                                                <img src="~/Images/check.png" width="20" alt="Estado" />
+                                            </button>
+                                        </form>
+                                    </div>
+                                    <div class="col">
+                                        <form action="@Url.Action("editar","DataGrid")" method="post"> @* Form para editar y actualizar la respectiva tarea*@
                                             <input type="hidden" name="IdTarea" value="<%=data.IdTarea%>" />
                                             <input type="hidden" name="Tarea" value="<%=data.Tarea%>" />
                                             <input type="hidden" name="DescripcionTarea" value="<%=data.DescripcionTarea%>" />
                                             <input type="hidden" name="Estado" value="<%=data.Estado%>" />
                                             <input type="hidden" name="CreacionTarea" value="<%=data.CreacionTarea%>" />
-                                            <button class="btn btn-outline-primary btn-sm" type="submit" style="border-radius:10%; width:50px;">
-                                                <img src="~/Images/check.png" width="20" alt="Editar tarea" />
+                                            <button class="btn btn-outline-warning btn-sm" type="submit" style="border-radius:10%; width:50px;">
+                                                <img src="~/Images/editar.png" width="20" alt="Editar tarea" />
                                             </button>
                                         </form>
                                     </div>
-                                    <div>
-                                        <form action="@Url.Action("eliminarTarea","DataGrid")" method="post">
+                                    <div class="col">
+                                        <form action="@Url.Action("eliminarTarea","DataGrid")" method="post"> @* Form para eliminar la respectiva tarea*@
                                             <input type="hidden" name="IdTarea" value="<%=data.IdTarea%>" />
-                                            <button class="btn btn-outline-danger btn-sm" type="submit" style="border-radius:10%; width:50px;">
+                                            <button  class="btn btn-outline-danger btn-sm" type="submit" style="border-radius:10%; width:50px;">
                                                 <img src="~/Images/eliminar.png" width="20" alt="Eliminar tarea" />
                                             </button>
                                         </form>
                                     </div>
+
+
+                                </div>
+
                             </text>);
     })
-    .DataSource(d => d.WebApi().Controller("DataGridFiltering").UpdateAction(true).DeleteAction(true).Key("IdTarea"))
+    .DataSource(d => d.WebApi().Controller("DataGridFiltering").Key("IdTarea")) //Carga de los datos del Controlador Api DataGrid
     .Summary(s => s
         .TotalItems(totalItems =>
         {
-            totalItems.AddFor(m => m.IdTarea).SummaryType(SummaryType.Count);
+            totalItems.AddFor(m => m.IdTarea).SummaryType(SummaryType.Count); //Uso de parametro Summary para validar cuantos items hay en la tabla
         })
         .GroupItems(groupItems =>
         {
@@ -103,9 +120,26 @@
         })
     )
 )
+@* Scripts sin funciolidad
+    <script>
 
-<script>
-    function getOrderDay(rowData) {
-        return (new Date(rowData.OrderDate)).getDay();
-    }
-</script>
+        const inpestado = document.getElementById('Estado');
+        const btncheck = document.getElementById('Check')
+
+        btncheck.addEventListener('click', function () {
+            if ((inpestado == 'pendiente') || (inpestado == 'Pendiente')) {
+
+                btncheck.classList.add('btn btn-outline-primary btn-sm');
+
+            } else {
+
+                btncheck.classList.add('btn btn-outline-danger btn-sm');
+
+            }
+        })
+
+
+        function getOrderDay(rowData) {
+            return (new Date(rowData.OrderDate)).getDay();
+        }
+    </script> *@
