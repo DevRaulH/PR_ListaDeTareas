@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\TesAmerica_Backup\\source\\repos\\ListaDeTareas\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{C9F5E65D-F9E0-4262-B37F-E6077F280590}|ListaDeTareas\\ListaDeTareas.csproj|c:\\users\\tesamerica_backup\\source\\repos\\listadetareas\\listadetareas\\models\\listadotareas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9F5E65D-F9E0-4262-B37F-E6077F280590}|ListaDeTareas\\ListaDeTareas.csproj|solutionrelative:listadetareas\\models\\listadotareas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C9F5E65D-F9E0-4262-B37F-E6077F280590}|ListaDeTareas\\ListaDeTareas.csproj|c:\\users\\tesamerica_backup\\source\\repos\\listadetareas\\listadetareas\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{C9F5E65D-F9E0-4262-B37F-E6077F280590}|ListaDeTareas\\ListaDeTareas.csproj|solutionrelative:listadetareas\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
@@ -19,12 +23,25 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "ListadoTareas.cs",
+              "DocumentMoniker": "C:\\Users\\TesAmerica_Backup\\source\\repos\\ListaDeTareas\\ListaDeTareas\\Models\\ListadoTareas.cs",
+              "RelativeDocumentMoniker": "ListaDeTareas\\Models\\ListadoTareas.cs",
+              "ToolTip": "C:\\Users\\TesAmerica_Backup\\source\\repos\\ListaDeTareas\\ListaDeTareas\\Models\\ListadoTareas.cs",
+              "RelativeToolTip": "ListaDeTareas\\Models\\ListadoTareas.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-19T00:19:28.205Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\TesAmerica_Backup\\source\\repos\\ListaDeTareas\\ListaDeTareas\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "ListaDeTareas\\Views\\Home\\Index.cshtml",
               "ToolTip": "C:\\Users\\TesAmerica_Backup\\source\\repos\\ListaDeTareas\\ListaDeTareas\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "ListaDeTareas\\Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-04-19T00:06:05.676Z",
               "EditorCaption": ""
