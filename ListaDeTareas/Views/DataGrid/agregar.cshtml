@@ -1,5 +1,4 @@
 ﻿@using ListaDeTareas.Models;
-@model IEnumerable<ListaDeTareas.Models.ListadoTareas>
 
 
 @{
@@ -7,66 +6,39 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Agregar tarea</h2>
+<head>
+    <link href="~/Content/cssboostrap.css" rel="stylesheet"/>
+</head>
 
 
-<div class="container">
-    <!--  -->
-
-    <form action="@Url.Action("AgregarTarea","DataGrid")" method="post">
-        <div class="form-row">
-            <div class="form-group col-md-4">
-                <label for="nombretarea">Tarea</label>
-                <input name="Tarea" autocomplete="off" type="text" class="form-control" id="nombretarea" required placeholder="Escribe un nombre...">
+<div class="bg-contact100">
+    <div class="container-contact100">
+        <div class="wrap-contact100">
+            <div class="contact100-pic js-tilt" data-tilt>
+                <img src="~/Images/registrar.jpg" alt="IMG">
             </div>
-            <div class="form-group col-md-4">
-                <label for="descripciontarea">Descripción de tarea</label>
-                <textarea name="DescripcionTarea" autocomplete="off" class="form-control" id="descripciontarea" rows="3" required placeholder="Escribe una descripcion..."></textarea>
-            </div>
+            <form class="contact100-form validate-form" action="@Url.Action("AgregarTarea","DataGrid")" method="post">
+                <h2 class="p-2">Agregar tarea</h2>
+
+                <div class="wrap-input100 validate-input" data-validate="Name is required">
+                    <input class="input100" type="text" name="Tarea" autocomplete="off" required placeholder="Escribe un nombre...">
+                        
+                    <span class="focus-input100"></span>
+                    <span class="symbol-input100">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                    </span>
+                </div>
+                
+                <div class="wrap-input100 validate-input" data-validate="Message is required">
+                    <textarea class="input100" name="DescripcionTarea" autocomplete="off" required placeholder="Escribe una descripcion..."></textarea>
+                    <span class="focus-input100"></span>
+                </div>
+                <div class="container-contact100-form-btn">
+                    <button type="submit" class="btn btn-outline-success btn-sm contact100-form-btn">Agregar</button>
+                    <a class="btn btn-outline-danger btn-sm contact100-form-btn" href="@Url.Action("Index","DataGrid")">Cancelar</a>
+                    <button class="btn btn-outline-primary btn-sm contact100-form-btn" type="reset">Limpiar</button>
+                </div>
+            </form>
         </div>
-        <div style="padding:5px">
-            <button type="submit" class="btn btn-outline-success btn-sm">Agregar</button>
-            <a class="btn btn-outline-danger btn-sm" href="@Url.Action("Index","DataGrid")">Cancelar</a>
-            <button class="btn btn-outline-warning btn-sm" type="reset">Limpiar</button>
-        </div>
-
-    </form>
-
-
-    <h2 style="padding:20px">Tareas recientes</h2>
-
-    <div class="table-responsive">
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Nombre de tarea</th>
-                    <th>Descripción de tarea</th>
-                    <th>Estado</th>
-                    <th>Fecha de creación</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (ListaDeTareas.Models.ListadoTareas item in Model)
-                {
-                    <tr>
-                        <td>@item.IdTarea</td>
-                        <td>@item.Tarea</td>
-                        <td>@item.DescripcionTarea</td>
-                        <td>@item.Estado</td>
-                        <td>@item.CreacionTarea</td>
-
-                    </tr>
-
-                }
-            </tbody>
-
-        </table>
     </div>
-
-
-
-
-
-
 </div>

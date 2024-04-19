@@ -62,6 +62,21 @@
             .Width(180)
             .DataType(GridColumnDataType.DateTime)
             .Format("d/M/yyyy, HH:mm");
+        columns.Add()
+                .Caption("Opciones")
+                .AllowFiltering(false)
+                .AllowSorting(false)
+                .CellTemplate(
+                            @<text>
+                                    <div>
+                                        <form action="@Url.Action("","")" method="post">
+                                            <input type="hidden" name="IdTarea" value="<%=data.IdTarea%>" />
+                                            <button class="btn btn-primary btn-sm" type="submit" style="border-radius:10%; width:50px; background-color:darkturquoise;">
+                                                <img src="~/Images/check.png" width="20" alt="Descargar Archivo" />
+                                            </button>
+                                        </form>
+                                    </div>
+                            </text>);
     })
     .DataSource(d => d.WebApi().Controller("DataGridFiltering").Key("IdTarea"))
     .Summary(s => s
