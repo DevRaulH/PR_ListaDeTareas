@@ -3,19 +3,31 @@
   "WorkspaceRootPath": "C:\\Users\\TesAmerica_Backup\\source\\repos\\ListaDeTareas\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{C9F5E65D-F9E0-4262-B37F-E6077F280590}|ListaDeTareas\\ListaDeTareas.csproj|c:\\users\\tesamerica_backup\\source\\repos\\listadetareas\\listadetareas\\controllers\\datagridcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9F5E65D-F9E0-4262-B37F-E6077F280590}|ListaDeTareas\\ListaDeTareas.csproj|solutionrelative:listadetareas\\controllers\\datagridcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9F5E65D-F9E0-4262-B37F-E6077F280590}|ListaDeTareas\\ListaDeTareas.csproj|c:\\users\\tesamerica_backup\\source\\repos\\listadetareas\\listadetareas\\views\\datagrid\\editar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C9F5E65D-F9E0-4262-B37F-E6077F280590}|ListaDeTareas\\ListaDeTareas.csproj|solutionrelative:listadetareas\\views\\datagrid\\editar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C9F5E65D-F9E0-4262-B37F-E6077F280590}|ListaDeTareas\\ListaDeTareas.csproj|c:\\users\\tesamerica_backup\\source\\repos\\listadetareas\\listadetareas\\views\\datagrid\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{C9F5E65D-F9E0-4262-B37F-E6077F280590}|ListaDeTareas\\ListaDeTareas.csproj|solutionrelative:listadetareas\\views\\datagrid\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C9F5E65D-F9E0-4262-B37F-E6077F280590}|ListaDeTareas\\ListaDeTareas.csproj|c:\\users\\tesamerica_backup\\source\\repos\\listadetareas\\listadetareas\\views\\datagrid\\agregar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{C9F5E65D-F9E0-4262-B37F-E6077F280590}|ListaDeTareas\\ListaDeTareas.csproj|C:\\Users\\TesAmerica_Backup\\source\\repos\\ListaDeTareas\\listadetareas\\views\\datagrid\\agregar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{C9F5E65D-F9E0-4262-B37F-E6077F280590}|ListaDeTareas\\ListaDeTareas.csproj|solutionrelative:listadetareas\\views\\datagrid\\agregar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C9F5E65D-F9E0-4262-B37F-E6077F280590}|ListaDeTareas\\ListaDeTareas.csproj|c:\\users\\tesamerica_backup\\source\\repos\\listadetareas\\listadetareas\\content\\cssboostrap.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "AbsoluteMoniker": "D:0:0:{C9F5E65D-F9E0-4262-B37F-E6077F280590}|ListaDeTareas\\ListaDeTareas.csproj|c:\\users\\tesamerica_backup\\source\\repos\\listadetareas\\listadetareas\\controllers\\datagridfilteringcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9F5E65D-F9E0-4262-B37F-E6077F280590}|ListaDeTareas\\ListaDeTareas.csproj|solutionrelative:listadetareas\\controllers\\datagridfilteringcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9F5E65D-F9E0-4262-B37F-E6077F280590}|ListaDeTareas\\ListaDeTareas.csproj|C:\\Users\\TesAmerica_Backup\\source\\repos\\ListaDeTareas\\listadetareas\\content\\cssboostrap.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{C9F5E65D-F9E0-4262-B37F-E6077F280590}|ListaDeTareas\\ListaDeTareas.csproj|solutionrelative:listadetareas\\content\\cssboostrap.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C9F5E65D-F9E0-4262-B37F-E6077F280590}|ListaDeTareas\\ListaDeTareas.csproj|c:\\users\\tesamerica_backup\\source\\repos\\listadetareas\\listadetareas\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{C9F5E65D-F9E0-4262-B37F-E6077F280590}|ListaDeTareas\\ListaDeTareas.csproj|C:\\Users\\TesAmerica_Backup\\source\\repos\\ListaDeTareas\\listadetareas\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{C9F5E65D-F9E0-4262-B37F-E6077F280590}|ListaDeTareas\\ListaDeTareas.csproj|solutionrelative:listadetareas\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
@@ -26,11 +38,50 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
+              "Title": "editar.cshtml",
+              "DocumentMoniker": "C:\\Users\\TesAmerica_Backup\\source\\repos\\ListaDeTareas\\ListaDeTareas\\Views\\DataGrid\\editar.cshtml",
+              "RelativeDocumentMoniker": "ListaDeTareas\\Views\\DataGrid\\editar.cshtml",
+              "ToolTip": "C:\\Users\\TesAmerica_Backup\\source\\repos\\ListaDeTareas\\ListaDeTareas\\Views\\DataGrid\\editar.cshtml",
+              "RelativeToolTip": "ListaDeTareas\\Views\\DataGrid\\editar.cshtml",
+              "ViewState": "AQIAACEAAAAAAAAAAAAIwDMAAAA7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-19T04:16:53.927Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DataGridController.cs",
+              "DocumentMoniker": "C:\\Users\\TesAmerica_Backup\\source\\repos\\ListaDeTareas\\ListaDeTareas\\Controllers\\DataGridController.cs",
+              "RelativeDocumentMoniker": "ListaDeTareas\\Controllers\\DataGridController.cs",
+              "ToolTip": "C:\\Users\\TesAmerica_Backup\\source\\repos\\ListaDeTareas\\ListaDeTareas\\Controllers\\DataGridController.cs",
+              "RelativeToolTip": "ListaDeTareas\\Controllers\\DataGridController.cs",
+              "ViewState": "AQIAAFgAAAAAAAAAAAAnwGoAAABEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-19T03:30:29.776Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DataGridFilteringController.cs",
+              "DocumentMoniker": "C:\\Users\\TesAmerica_Backup\\source\\repos\\ListaDeTareas\\ListaDeTareas\\Controllers\\DataGridFilteringController.cs",
+              "RelativeDocumentMoniker": "ListaDeTareas\\Controllers\\DataGridFilteringController.cs",
+              "ToolTip": "C:\\Users\\TesAmerica_Backup\\source\\repos\\ListaDeTareas\\ListaDeTareas\\Controllers\\DataGridFilteringController.cs",
+              "RelativeToolTip": "ListaDeTareas\\Controllers\\DataGridFilteringController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAD4AAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-19T02:51:07.206Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\TesAmerica_Backup\\source\\repos\\ListaDeTareas\\ListaDeTareas\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "ListaDeTareas\\Views\\Shared\\_Layout.cshtml",
@@ -38,12 +89,11 @@
               "RelativeToolTip": "ListaDeTareas\\Views\\Shared\\_Layout.cshtml",
               "ViewState": "AQIAAAUAAAAAAAAAAAAAAAsAAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-19T02:02:02.819Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-19T02:02:02.819Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "cssboostrap.css",
               "DocumentMoniker": "C:\\Users\\TesAmerica_Backup\\source\\repos\\ListaDeTareas\\ListaDeTareas\\Content\\cssboostrap.css",
               "RelativeDocumentMoniker": "ListaDeTareas\\Content\\cssboostrap.css",
@@ -51,31 +101,30 @@
               "RelativeToolTip": "ListaDeTareas\\Content\\cssboostrap.css",
               "ViewState": "AQIAADgBAAAAAAAAAAAAAEUBAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-04-19T01:58:51.347Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-19T01:58:51.347Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "agregar.cshtml",
               "DocumentMoniker": "C:\\Users\\TesAmerica_Backup\\source\\repos\\ListaDeTareas\\ListaDeTareas\\Views\\DataGrid\\agregar.cshtml",
               "RelativeDocumentMoniker": "ListaDeTareas\\Views\\DataGrid\\agregar.cshtml",
               "ToolTip": "C:\\Users\\TesAmerica_Backup\\source\\repos\\ListaDeTareas\\ListaDeTareas\\Views\\DataGrid\\agregar.cshtml",
               "RelativeToolTip": "ListaDeTareas\\Views\\DataGrid\\agregar.cshtml",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAAAAAAAAAcAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACUAAABcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-04-19T01:20:51.444Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\TesAmerica_Backup\\source\\repos\\ListaDeTareas\\ListaDeTareas\\Views\\DataGrid\\Index.cshtml",
               "RelativeDocumentMoniker": "ListaDeTareas\\Views\\DataGrid\\Index.cshtml",
               "ToolTip": "C:\\Users\\TesAmerica_Backup\\source\\repos\\ListaDeTareas\\ListaDeTareas\\Views\\DataGrid\\Index.cshtml",
               "RelativeToolTip": "ListaDeTareas\\Views\\DataGrid\\Index.cshtml",
-              "ViewState": "AQIAABYAAAAAAAAAAAAhwEAAAAAIAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-04-19T01:07:10.248Z",
               "EditorCaption": ""

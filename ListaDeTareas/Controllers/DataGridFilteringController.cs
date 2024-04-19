@@ -7,6 +7,12 @@ using System.Data.SqlClient;
 using System.Data;
 using System.Net.Http;
 using System.Web.Http;
+using Newtonsoft.Json;
+using System.Net.Http.Formatting;
+using System.Net;
+using System.Threading;
+using System.Collections;
+using System.Linq;
 
 namespace ListaDeTareasCSHARP.Controllers
 {
@@ -53,6 +59,13 @@ namespace ListaDeTareasCSHARP.Controllers
 
             return Request.CreateResponse(DataSourceLoader.Load(olistaTarea, loadOptions));
         }
+
+        
+
+
+
+
+
 
     }
 }

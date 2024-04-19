@@ -69,16 +69,29 @@
                 .CellTemplate(
                             @<text>
                                     <div>
-                                        <form action="@Url.Action("","")" method="post">
+                                        <form action="@Url.Action("editar","DataGrid")" method="post">
+
                                             <input type="hidden" name="IdTarea" value="<%=data.IdTarea%>" />
-                                            <button class="btn btn-primary btn-sm" type="submit" style="border-radius:10%; width:50px; background-color:darkturquoise;">
-                                                <img src="~/Images/check.png" width="20" alt="Descargar Archivo" />
+                                            <input type="hidden" name="Tarea" value="<%=data.Tarea%>" />
+                                            <input type="hidden" name="DescripcionTarea" value="<%=data.DescripcionTarea%>" />
+                                            <input type="hidden" name="Estado" value="<%=data.Estado%>" />
+                                            <input type="hidden" name="CreacionTarea" value="<%=data.CreacionTarea%>" />
+                                            <button class="btn btn-primary btn-sm" type="submit" style="border-radius:10%; width:50px;">
+                                                <img src="~/Images/check.png" width="20" alt="Editar tarea" />
+                                            </button>
+                                        </form>
+                                    </div>
+                                    <div>
+                                        <form action="@Url.Action("eliminarTarea","DataGrid")" method="post">
+                                            <input type="hidden" name="IdTarea" value="<%=data.IdTarea%>" />
+                                            <button class="btn btn-danger btn-sm" type="submit" style="border-radius:10%; width:50px;">
+                                                <img src="~/Images/eliminar.png" width="20" alt="Eliminar tarea" />
                                             </button>
                                         </form>
                                     </div>
                             </text>);
     })
-    .DataSource(d => d.WebApi().Controller("DataGridFiltering").Key("IdTarea"))
+    .DataSource(d => d.WebApi().Controller("DataGridFiltering").UpdateAction(true).DeleteAction(true).Key("IdTarea"))
     .Summary(s => s
         .TotalItems(totalItems =>
         {

@@ -53,7 +53,23 @@ namespace ListaDeTareas.Controllers
             return View(olistaTarea);
         }
 
+        public ActionResult editar(int IdTarea, string Tarea, string DescripcionTarea, string Estado, DateTime CreacionTarea)
+        {
 
+            olistaTarea = new List<ListadoTareas>();
+
+            ListadoTareas busqueda = new ListadoTareas();
+            busqueda.IdTarea = IdTarea;
+            busqueda.Tarea = Tarea;
+            busqueda.DescripcionTarea = DescripcionTarea;
+            busqueda.Estado = Estado;
+            busqueda.CreacionTarea = CreacionTarea;
+
+            olistaTarea.Add(busqueda);
+
+
+            return View(olistaTarea);
+        }
 
         [HttpPost]
         public ActionResult AgregarTarea(string Tarea, string DescripcionTarea)
@@ -69,6 +85,44 @@ namespace ListaDeTareas.Controllers
                 sqlCmd.Parameters.AddWithValue("@descripcion", DescripcionTarea);
                 sqlCmd.Parameters.AddWithValue("@estado", estado);
                 sqlCmd.Parameters.AddWithValue("@creacion", creaciontarea);
+                sqlCmd.CommandType = CommandType.Text;
+
+                sqlConexion.Open();
+                sqlCmd.ExecuteNonQuery();
+            }
+
+            return RedirectToAction("Index", "DataGrid");
+        }
+
+        [HttpPost]
+        public ActionResult actualizarTarea(int IdTarea, string Tarea, string DescripcionTarea, string Estado, DateTime CreacionTarea)
+        {
+            
+            using (SqlConnection sqlConexion = new SqlConnection(cadenaConexion))
+            {
+                SqlCommand sqlCmd = new SqlCommand("insert into ListadoTareas(Tarea,DescripcionTarea,Estado,CreacionTarea) values (@nombre,@descripcion,@estado,@creacion)", sqlConexion);
+                sqlCmd.Parameters.AddWithValue("@nombre", Tarea);
+                sqlCmd.Parameters.AddWithValue("@descripcion", DescripcionTarea);
+                sqlCmd.Parameters.AddWithValue("@estado", Estado);
+                sqlCmd.Parameters.AddWithValue("@creacion", CreacionTarea);
+                sqlCmd.CommandType = CommandType.Text;
+
+                sqlConexion.Open();
+                sqlCmd.ExecuteNonQuery();
+            }
+
+            return RedirectToAction("Index", "DataGrid");
+        }
+
+
+        [HttpPost]
+        public ActionResult eliminarTarea(int IdTarea)
+        {
+            
+            using (SqlConnection sqlConexion = new SqlConnection(cadenaConexion))
+            {
+                SqlCommand sqlCmd = new SqlCommand("delete from ListadoTareas where IdTarea=@id", sqlConexion);
+                sqlCmd.Parameters.AddWithValue("@id", IdTarea);
                 sqlCmd.CommandType = CommandType.Text;
 
                 sqlConexion.Open();

@@ -1,0 +1,68 @@
+﻿@using ListaDeTareas.Models;
+@model IEnumerable<ListaDeTareas.Models.ListadoTareas>
+
+
+@{
+    ViewBag.Title = "editar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<head>
+    <link href="~/Content/cssboostrap.css" rel="stylesheet" />
+</head>
+
+
+<div class="bg-contact100">
+    <div class="container-contact100">
+        <div class="wrap-contact100">
+            <div class="contact100-pic js-tilt" data-tilt>
+                <img src="~/Images/registrar.jpg" alt="IMG">
+            </div>
+            <form class="contact100-form validate-form" action="@Url.Action("actualizarTarea","DataGrid")" method="post">
+                <h2 class="p-2">Editar tarea</h2>
+                
+                @foreach (ListaDeTareas.Models.ListadoTareas item in Model)
+                {
+
+                    <div class="wrap-input100 validate-input" data-validate="Name is required">
+                        <input type="hidden" name="IdTarea" value="@item.IdTarea" />
+                        <input class="input100" type="text" name="Tarea" value="@item.Tarea" autocomplete="off" required placeholder="Tarea...">
+
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                        </span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input" data-validate="Message is required">
+                        <textarea class="input100" name="DescripcionTarea" value="@item.DescripcionTarea" autocomplete="off" required placeholder="Descripcion..."></textarea>
+                        <span class="focus-input100"></span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input" data-validate="Name is required">
+                        <input class="input100" type="text" name="Estado" value="@item.Estado" autocomplete="off" required placeholder="Estado...">
+
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                        </span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input" data-validate="Name is required">
+                        <input class="input100" type="date" name="CreacionTarea" value="@item.CreacionTarea" autocomplete="off" required placeholder="Escribe un nombre...">
+
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                        </span>
+                    </div>
+
+                    <div class="container-contact100-form-btn">
+                        <button type="submit" class="btn btn-outline-success btn-sm contact100-form-btn">Actualizar</button>
+                        <a class="btn btn-outline-danger btn-sm contact100-form-btn" href="@Url.Action("Index","DataGrid")">Cancelar</a>
+                    </div>
+                }
+            </form>
+        </div>
+    </div>
+</div>

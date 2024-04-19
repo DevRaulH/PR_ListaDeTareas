@@ -169,10 +169,12 @@
     <Content Include="Content\dx.softblue.compact.css" />
     <Content Include="Content\dx.softblue.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="Content\styles.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Images\actualizar.png" />
     <Content Include="Images\check.png" />
+    <Content Include="Images\eliminar.png" />
     <Content Include="Images\registrar.jpg" />
     <Content Include="Scripts\aspnet\dx.aspnet.data.js" />
     <Content Include="Scripts\aspnet\dx.aspnet.mvc.js" />
@@ -362,6 +364,7 @@
     <Content Include="Web.config" />
     <Content Include="Views\DataGrid\Index.cshtml" />
     <Content Include="Views\DataGrid\agregar.cshtml" />
+    <Content Include="Views\DataGrid\editar.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
