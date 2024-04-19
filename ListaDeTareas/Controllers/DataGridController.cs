@@ -58,7 +58,7 @@ namespace ListaDeTareas.Controllers
         [HttpPost]
         public ActionResult AgregarTarea(string Tarea, string DescripcionTarea)
         {
-            string estado = "pendiente";
+            string estado = "Pendiente";
 
             DateTime creaciontarea = DateTime.Now;
 

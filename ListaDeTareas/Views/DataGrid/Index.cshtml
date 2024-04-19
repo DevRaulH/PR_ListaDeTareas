@@ -1,8 +1,83 @@
-﻿
-@{
-    ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
+﻿@using ListaDeTareas.Models;
 
-<h2>Index</h2>
+<head>
+    <link rel="stylesheet" href="~/Content/style.css" />
+</head>
 
+<h2>Inicio</h2>
+
+<div class="container" style="align-items:end;">
+
+    <a class="btn btn-outline-success" href="@Url.Action("agregar","DataGrid")">Agregar Tarea</a>
+    <a class="btn btn-outline-secondary" href="@Url.Action("Index","DataGrid")"><img src="~/Images/actualizar.png" width="20" alt="Actualizar tabla" /></a>
+
+</div>
+
+
+
+@(Html.DevExtreme().DataGrid<ListadoTareas>()
+    .ID("gridContainer")
+    .ColumnAutoWidth(true)
+    .RowAlternationEnabled(true)
+    .ShowBorders(true)
+    .Paging(paging => paging.PageSize(10))
+    .Pager(pager =>
+    {
+        pager.Visible(true);
+        pager.DisplayMode(GridPagerDisplayMode.Full);
+        pager.ShowPageSizeSelector(true);
+        pager.AllowedPageSizes(new JS("[5, 10, 20, 'all']"));
+        pager.ShowInfo(true);
+        pager.ShowNavigationButtons(true);
+    })
+    .FilterRow(filterRow => filterRow
+        .Visible(true)
+        .ApplyFilter(GridApplyFilterMode.Auto)
+    )
+    .SearchPanel(searchPanel => searchPanel
+        .Visible(true)
+        .Width(240)
+        .Placeholder("Buscar...")
+    )
+    .HeaderFilter(headerFilter => headerFilter.Visible(true))
+
+    .Columns(columns => {
+        columns.AddFor(m => m.IdTarea)
+            .Width(140)
+            .HeaderFilter(filter => filter.GroupInterval(5))
+            .Caption("ID");
+
+        columns.AddFor(m => m.Tarea)
+            .Caption("Nombre de tarea");
+
+        columns.AddFor(m => m.DescripcionTarea)
+            .Caption("Descripción de tarea");
+
+        columns.AddFor(m => m.Estado)
+            .Caption("Estado");
+
+        columns.AddFor(m => m.CreacionTarea)
+            .Caption("Fecha de creación")
+            .Alignment(HorizontalAlignment.Right)
+            .Width(180)
+            .DataType(GridColumnDataType.DateTime)
+            .Format("d/M/yyyy, HH:mm");
+    })
+    .DataSource(d => d.WebApi().Controller("DataGridFiltering").Key("IdTarea"))
+    .Summary(s => s
+        .TotalItems(totalItems =>
+        {
+            totalItems.AddFor(m => m.IdTarea).SummaryType(SummaryType.Count);
+        })
+        .GroupItems(groupItems =>
+        {
+            groupItems.Add().SummaryType(SummaryType.Count);
+        })
+    )
+)
+
+<script>
+    function getOrderDay(rowData) {
+        return (new Date(rowData.OrderDate)).getDay();
+    }
+</script>
