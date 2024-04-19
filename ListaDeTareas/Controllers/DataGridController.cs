@@ -100,11 +100,12 @@ namespace ListaDeTareas.Controllers
             
             using (SqlConnection sqlConexion = new SqlConnection(cadenaConexion))
             {
-                SqlCommand sqlCmd = new SqlCommand("insert into ListadoTareas(Tarea,DescripcionTarea,Estado,CreacionTarea) values (@nombre,@descripcion,@estado,@creacion)", sqlConexion);
+                SqlCommand sqlCmd = new SqlCommand("update ListadoTareas set Tarea=@nombre, DescripcionTarea=@descripcion,  Estado=@estado, CreacionTarea=@creacion where IdTarea=@id", sqlConexion);
                 sqlCmd.Parameters.AddWithValue("@nombre", Tarea);
                 sqlCmd.Parameters.AddWithValue("@descripcion", DescripcionTarea);
                 sqlCmd.Parameters.AddWithValue("@estado", Estado);
                 sqlCmd.Parameters.AddWithValue("@creacion", CreacionTarea);
+                sqlCmd.Parameters.AddWithValue("@id", IdTarea);
                 sqlCmd.CommandType = CommandType.Text;
 
                 sqlConexion.Open();

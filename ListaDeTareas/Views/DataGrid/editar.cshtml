@@ -35,7 +35,7 @@
                     </div>
 
                     <div class="wrap-input100 validate-input" data-validate="Message is required">
-                        <textarea class="input100" name="DescripcionTarea" value="@item.DescripcionTarea" autocomplete="off" required placeholder="Descripcion..."></textarea>
+                        <textarea class="input100" name="DescripcionTarea" autocomplete="off" required placeholder="Descripcion...">@item.DescripcionTarea</textarea>
                         <span class="focus-input100"></span>
                     </div>
 
@@ -49,7 +49,7 @@
                     </div>
 
                     <div class="wrap-input100 validate-input" data-validate="Name is required">
-                        <input class="input100" type="date" name="CreacionTarea" value="@item.CreacionTarea" autocomplete="off" required placeholder="Escribe un nombre...">
+                        <input class="input100" type="datetime" name="CreacionTarea" value="@item.CreacionTarea" autocomplete="off" required readonly>
 
                         <span class="focus-input100"></span>
                         <span class="symbol-input100">
