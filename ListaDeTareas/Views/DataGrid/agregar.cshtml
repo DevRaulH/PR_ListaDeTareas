@@ -1,8 +1,72 @@
-﻿
+﻿@using ListaDeTareas.Models;
+@model IEnumerable<ListaDeTareas.Models.ListadoTareas>
+
+
 @{
     ViewBag.Title = "agregar";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>agregar</h2>
+<h2>Agregar tarea</h2>
 
+
+<div class="container">
+    <!--  -->
+
+    <form action="@Url.Action("AgregarTarea","DataGrid")" method="post">
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label for="nombretarea">Tarea</label>
+                <input name="Tarea" autocomplete="off" type="text" class="form-control" id="nombretarea" required placeholder="Escribe un nombre...">
+            </div>
+            <div class="form-group col-md-4">
+                <label for="descripciontarea">Descripción de tarea</label>
+                <textarea name="DescripcionTarea" autocomplete="off" class="form-control" id="descripciontarea" rows="3" required placeholder="Escribe una descripcion..."></textarea>
+            </div>
+        </div>
+        <div style="padding:5px">
+            <button type="submit" class="btn btn-outline-success btn-sm">Agregar</button>
+            <a class="btn btn-outline-danger btn-sm" href="@Url.Action("Index","DataGrid")">Cancelar</a>
+            <button class="btn btn-outline-warning btn-sm" type="reset">Limpiar</button>
+        </div>
+
+    </form>
+
+
+    <h2 style="padding:20px">Tareas recientes</h2>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre de tarea</th>
+                    <th>Descripción de tarea</th>
+                    <th>Estado</th>
+                    <th>Fecha de creación</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (ListaDeTareas.Models.ListadoTareas item in Model)
+                {
+                    <tr>
+                        <td>@item.IdTarea</td>
+                        <td>@item.Tarea</td>
+                        <td>@item.DescripcionTarea</td>
+                        <td>@item.Estado</td>
+                        <td>@item.CreacionTarea</td>
+
+                    </tr>
+
+                }
+            </tbody>
+
+        </table>
+    </div>
+
+
+
+
+
+
+</div>

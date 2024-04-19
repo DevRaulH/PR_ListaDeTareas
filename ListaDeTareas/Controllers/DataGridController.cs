@@ -50,12 +50,33 @@ namespace ListaDeTareas.Controllers
 
                 }
             }
-
-
-
             return View(olistaTarea);
         }
 
+
+
+        [HttpPost]
+        public ActionResult AgregarTarea(string Tarea, string DescripcionTarea)
+        {
+            string estado = "pendiente";
+
+            DateTime creaciontarea = DateTime.Now;
+
+            using (SqlConnection sqlConexion = new SqlConnection(cadenaConexion))
+            {
+                SqlCommand sqlCmd = new SqlCommand("insert into ListadoTareas(Tarea,DescripcionTarea,Estado,CreacionTarea) values (@nombre,@descripcion,@estado,@creacion)", sqlConexion);
+                sqlCmd.Parameters.AddWithValue("@nombre", Tarea);
+                sqlCmd.Parameters.AddWithValue("@descripcion", DescripcionTarea);
+                sqlCmd.Parameters.AddWithValue("@estado", estado);
+                sqlCmd.Parameters.AddWithValue("@creacion", creaciontarea);
+                sqlCmd.CommandType = CommandType.Text;
+
+                sqlConexion.Open();
+                sqlCmd.ExecuteNonQuery();
+            }
+
+            return RedirectToAction("Index", "DataGrid");
+        }
 
 
     }
